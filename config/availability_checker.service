@@ -1,0 +1,11 @@
+[Unit]
+Description=Tenerife Ticket Checker
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/darkroom2/DEV/tenerife/.venv/bin/python -u /home/darkroom2/DEV/tenerife/ticker_checker.py
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
